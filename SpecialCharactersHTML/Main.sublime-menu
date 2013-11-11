@@ -28,7 +28,15 @@
                                     "file": "${packages}/SpecialCharactersHTML/Settings/HTMLU.sublime-settings"
                                 },
                                 "caption": "Settings (HTML) – User"
+                            },
+                            {
+                                "command": "open_file", "args":
+                                {
+                                    "file": "${packages}/SpecialCharactersHTML/Settings/characters.txt"
+                                },
+                                "caption": "Characters availables to exlude"
                             }
+
                         ]
                     }
                 ]

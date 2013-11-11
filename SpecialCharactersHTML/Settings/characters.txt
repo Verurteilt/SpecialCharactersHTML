@@ -1,0 +1,8 @@
+/* Characters available to exclude in HTML.sublime-settings
+
+		{"á":'&acute;',"é":"&ecute;","í":"&icute;","ó":"&ocute;", "ú":"&ucute;",
+		 			"Á":"&Acute;", "É":"&Ecute;","Í":"&Icute;","Ó":"&Ocute;", "Ú":"&Ucute;",
+		 			"¿":"&iquest;", '¡':'&iexcl;', 'ñ':'&ntilde;', ">":"&gt;", "<":"&lt;"}
+		
+
+
