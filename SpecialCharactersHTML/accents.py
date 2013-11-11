@@ -12,11 +12,10 @@ PACKAGE_DIR = os.path.abspath(os.path.join(PACKAGE_DIR, os.path.pardir))
 SETTINGS_DIR = os.path.join(PACKAGE_DIR, "Settings")
 SETTINGS_GENERAL = os.path.join(SETTINGS_DIR, "HTML.sublime-settings")
 SETTINGS_USUARIO = os.path.join(SETTINGS_DIR, "HTMLU.sublime-settings")
-try:
-	JSON_SETTINGS_GENERAL = json.loads(open(SETTINGS_GENERAL, 'r+').read())
-	JSON_SETTINGS_USUARIO = json.loads(open(SETTINGS_USUARIO, 'r+').read())
-except Exception as e:
-	print e
+
+
+JSON_SETTINGS_GENERAL = json.loads(open(SETTINGS_GENERAL, 'r+').read())
+JSON_SETTINGS_USUARIO = json.loads(open(SETTINGS_USUARIO, 'r+').read())
 
 class AccentsCommand(sublime_plugin.TextCommand):
 
