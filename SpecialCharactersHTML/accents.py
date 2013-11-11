@@ -11,8 +11,8 @@ except ImportError:
 class AccentsCommand(sublime_plugin.TextCommand):
 
 	def run(self, edit):
-		PACKAGE_DIR =  os.path.abspath(__file__)
-		PACKAGE_DIR = os.path.abspath(os.path.join(PACKAGE_DIR, os.path.pardir))
+		PACKAGE_DIR =  sublime.packages_path()
+		PACKAGE_DIR = os.path.join(PACKAGE_DIR, "SpecialCharactersHTML")
 		SETTINGS_DIR = os.path.join(PACKAGE_DIR, "Settings")
 		SETTINGS_GENERAL = os.path.join(SETTINGS_DIR, "HTML.sublime-settings")
 		SETTINGS_USUARIO = os.path.join(SETTINGS_DIR, "HTMLU.sublime-settings")
@@ -21,11 +21,11 @@ class AccentsCommand(sublime_plugin.TextCommand):
 		caracters = {"á":'&acute;',"é":"&ecute;","í":"&icute;","ó":"&ocute;", "ú":"&ucute;",
 		 			"Á":"&Acute;", "É":"&Ecute;","Í":"&Icute;","Ó":"&Ocute;", "Ú":"&Ucute;",
 		 			"¿":"&iquest;", '¡':'&iexcl;', 'ñ':'&ntilde;', ">":"&gt;", "<":"&lt;"}
-		
 		for clave, valor in JSON_SETTINGS_USUARIO['include'][0].iteritems():
 			clave = clave.encode('utf-8')
 			valor = valor.encode('utf-8')
 			caracters[clave] = valor
+			print caracters
 		if JSON_SETTINGS_GENERAL.has_key('exclude'):
 			exclude = JSON_SETTINGS_GENERAL['exclude']
 			for caracter_to_exclude in exclude:
