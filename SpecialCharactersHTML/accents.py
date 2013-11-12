@@ -25,7 +25,6 @@ class AccentsCommand(sublime_plugin.TextCommand):
 			clave = clave.encode('utf-8')
 			valor = valor.encode('utf-8')
 			caracters[clave] = valor
-			print caracters
 		if JSON_SETTINGS_GENERAL.has_key('exclude'):
 			exclude = JSON_SETTINGS_GENERAL['exclude']
 			for caracter_to_exclude in exclude:
