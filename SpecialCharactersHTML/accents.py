@@ -18,8 +18,8 @@ class AccentsCommand(sublime_plugin.TextCommand):
 		SETTINGS_USUARIO = os.path.join(SETTINGS_DIR, "HTMLU.sublime-settings")
 		JSON_SETTINGS_GENERAL = json.loads(open(SETTINGS_GENERAL, 'r+').read())
 		JSON_SETTINGS_USUARIO = json.loads(open(SETTINGS_USUARIO, 'r+').read())
-		caracters = {"á":'&acute;',"é":"&ecute;","í":"&icute;","ó":"&ocute;", "ú":"&ucute;",
-		 			"Á":"&Acute;", "É":"&Ecute;","Í":"&Icute;","Ó":"&Ocute;", "Ú":"&Ucute;",
+		caracters = {"á":'&aacute;',"é":"&eacute;","í":"&iacute;","ó":"&oacute;", "ú":"&uacute;",
+		 			"Á":"&Aacute;", "É":"&Eacute;","Í":"&Iacute;","Ó":"&Oacute;", "Ú":"&Uacute;",
 		 			"¿":"&iquest;", '¡':'&iexcl;', 'ñ':'&ntilde;', ">":"&gt;", "<":"&lt;"}
 		for clave, valor in JSON_SETTINGS_USUARIO['include'][0].iteritems():
 			clave = clave.encode('utf-8')
